@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://c8whvk742o4bn"]
+[gd_scene load_steps=15 format=3 uid="uid://c8whvk742o4bn"]
 
 [ext_resource type="Script" path="res://CharacterBody3D.gd" id="1_hpdiw"]
 [ext_resource type="Script" path="res://AIController3D.gd" id="2_f2oi0"]
+[ext_resource type="Script" path="res://target.gd" id="3_icosh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qbn0k"]
 albedo_color = Color(1, 0.6, 0, 1)
@@ -32,6 +33,12 @@ material = SubResource("StandardMaterial3D_wymjy")
 [sub_resource type="BoxShape3D" id="BoxShape3D_8s0vb"]
 size = Vector3(10, 1, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_5qye4"]
+size = Vector3(3.13574, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eufpa"]
+size = Vector3(6.00037, 1, 0.437988)
+
 [node name="Train" type="Node3D"]
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
@@ -46,6 +53,7 @@ shape = SubResource("BoxShape3D_domvn")
 
 [node name="AIController3D" type="Node3D" parent="CharacterBody3D"]
 script = ExtResource("2_f2oi0")
+reset_after = 1
 
 [node name="floor" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
@@ -57,7 +65,8 @@ mesh = SubResource("BoxMesh_axscd")
 shape = SubResource("ConcavePolygonShape3D_3qtfb")
 
 [node name="target" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.31336, -1, 0.0630139)
+transform = Transform3D(1.565, 0, 0, 0, 1.565, 0, 0, 0, 1.565, -3.54978, -1, 3.54693)
+script = ExtResource("3_icosh")
 metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="target"]
@@ -84,5 +93,25 @@ shape = SubResource("BoxShape3D_8s0vb")
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.51399, 0, -0.057412)
 shape = SubResource("BoxShape3D_8s0vb")
 
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="wall"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.0443667, 0, 0.10425)
+shape = SubResource("BoxShape3D_5qye4")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8372, 0, -1.66716)
+shape = SubResource("BoxShape3D_eufpa")
+
+[node name="target2" type="Area3D" parent="."]
+transform = Transform3D(1.565, 0, 0, 0, 1.565, 0, 0, 0, 1.565, -2.99298, -1, -3.70507)
+script = ExtResource("3_icosh")
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="target2"]
+mesh = SubResource("BoxMesh_ntfuw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="target2"]
+shape = SubResource("BoxShape3D_8jpbc")
+
 [connection signal="body_entered" from="target" to="CharacterBody3D" method="_on_target_body_entered"]
 [connection signal="body_entered" from="wall" to="CharacterBody3D" method="_on_wall_body_entered"]
+[connection signal="body_entered" from="target2" to="CharacterBody3D" method="_on_target_body_entered"]

@@ -5,56 +5,21 @@
 
 [node name="Trainer" type="Node"]
 
-[node name="Train" parent="." instance=ExtResource("1_mixv4")]
-
-[node name="Train2" parent="." instance=ExtResource("1_mixv4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7849, 0, 0)
-
-[node name="Train3" parent="." instance=ExtResource("1_mixv4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15.3583)
-
-[node name="Train4" parent="." instance=ExtResource("1_mixv4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7849, 0, 15.3583)
-
-[node name="Train5" parent="." instance=ExtResource("1_mixv4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -31)
-
-[node name="Train6" parent="." instance=ExtResource("1_mixv4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7849, 0, -31)
-
-[node name="Train7" parent="." instance=ExtResource("1_mixv4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15.6417)
-
-[node name="Train8" parent="." instance=ExtResource("1_mixv4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7849, 0, -15.6417)
-
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.970963, 0.239228, 0, -0.239228, 0.970963, -6.82491, 14.4367, 34.1786)
+transform = Transform3D(1, 0, 0, 0, 0.0932223, 0.995645, 0, -0.995645, 0.0932223, -17.0852, 23.4367, -6.16889)
 
 [node name="Train9" parent="." instance=ExtResource("1_mixv4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.0435, 0, 0)
-
-[node name="Train10" parent="." instance=ExtResource("1_mixv4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2585, 0, 0)
-
-[node name="Train11" parent="." instance=ExtResource("1_mixv4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.0435, 0, 15.3583)
-
-[node name="Train12" parent="." instance=ExtResource("1_mixv4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2585, 0, 15.3583)
-
-[node name="Train13" parent="." instance=ExtResource("1_mixv4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.0435, 0, -31)
-
-[node name="Train14" parent="." instance=ExtResource("1_mixv4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2585, 0, -31)
-
-[node name="Train15" parent="." instance=ExtResource("1_mixv4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.0435, 0, -15.6417)
-
-[node name="Train16" parent="." instance=ExtResource("1_mixv4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2585, 0, -15.6417)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.0435, 0, 2.18617)
 
 [node name="Sync" type="Node" parent="."]
 script = ExtResource("2_eoal1")
 speed_up = 16.0
+
+[node name="Train10" parent="." instance=ExtResource("1_mixv4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.63478, 0, 2.18617)
+
+[node name="Train11" parent="." instance=ExtResource("1_mixv4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.0435, 0, -12.9669)
+
+[node name="Train12" parent="." instance=ExtResource("1_mixv4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.63478, 0, -12.9669)

@@ -9,6 +9,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var ai_controller = $AIController3D
 
 
+
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
@@ -20,14 +21,7 @@ func _physics_process(delta):
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	#var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	#var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	#if direction:
-		#velocity.x = direction.x * SPEED
-		#velocity.z = direction.z * SPEED
-#else:
-		#velocity.x = move_toward(velocity.x, 0, SPEED)
-		#velocity.z = move_toward(velocity.z, 0, SPEED)
+
 	velocity.x = ai_controller.move.x
 	velocity.z = ai_controller.move.y
 	move_and_slide()
@@ -35,7 +29,7 @@ func _physics_process(delta):
 
 func _on_target_body_entered(body):
 	position = Vector3(-3.5,.07,0)
-	ai_controller.reward += 1
+	ai_controller.reward += 2
 
 
 func _on_wall_body_entered(body):
