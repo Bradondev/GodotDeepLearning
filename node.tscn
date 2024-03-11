@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://comkac4ng6ika"]
+
+[ext_resource type="PackedScene" uid="uid://mklg1q758tn3" path="res://GridBase/Base.tscn" id="1_gtw1e"]
+[ext_resource type="Script" path="res://addons/godot_rl_agents/sync.gd" id="2_wlr1h"]
+
+[node name="Node" type="Node"]
+
+[node name="Base" parent="." instance=ExtResource("1_gtw1e")]
+position = Vector2(9, 4)
+
+[node name="Sync" type="Node" parent="."]
+script = ExtResource("2_wlr1h")
+speed_up = 4.0
+
+[node name="Base2" parent="." instance=ExtResource("1_gtw1e")]
+position = Vector2(10, 693)

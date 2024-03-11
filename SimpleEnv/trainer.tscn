@@ -1,25 +1,25 @@
 [gd_scene load_steps=3 format=3 uid="uid://bycf1oo6fsm7x"]
 
-[ext_resource type="PackedScene" uid="uid://c8whvk742o4bn" path="res://train.tscn" id="1_mixv4"]
-[ext_resource type="Script" path="res://addons/godot_rl_agents/sync.gd" id="2_eoal1"]
+[ext_resource type="PackedScene" uid="uid://c8whvk742o4bn" path="res://SimpleEnv/train.tscn" id="1_2v2s7"]
+[ext_resource type="Script" path="res://addons/godot_rl_agents/sync.gd" id="2_g88c4"]
 
 [node name="Trainer" type="Node"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.0932223, 0.995645, 0, -0.995645, 0.0932223, -17.0852, 23.4367, -6.16889)
 
-[node name="Train9" parent="." instance=ExtResource("1_mixv4")]
+[node name="Train9" parent="." instance=ExtResource("1_2v2s7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.0435, 0, 2.18617)
 
 [node name="Sync" type="Node" parent="."]
-script = ExtResource("2_eoal1")
+script = ExtResource("2_g88c4")
 speed_up = 16.0
 
-[node name="Train10" parent="." instance=ExtResource("1_mixv4")]
+[node name="Train10" parent="." instance=ExtResource("1_2v2s7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.63478, 0, 2.18617)
 
-[node name="Train11" parent="." instance=ExtResource("1_mixv4")]
+[node name="Train11" parent="." instance=ExtResource("1_2v2s7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.0435, 0, -12.9669)
 
-[node name="Train12" parent="." instance=ExtResource("1_mixv4")]
+[node name="Train12" parent="." instance=ExtResource("1_2v2s7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.63478, 0, -12.9669)
