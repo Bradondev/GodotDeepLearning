@@ -13,13 +13,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.0435, 0, 2.18617)
 
 [node name="Sync" type="Node" parent="."]
 script = ExtResource("2_g88c4")
-speed_up = 16.0
-
-[node name="Train10" parent="." instance=ExtResource("1_2v2s7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.63478, 0, 2.18617)
-
-[node name="Train11" parent="." instance=ExtResource("1_2v2s7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.0435, 0, -12.9669)
+speed_up = 24.0
 
 [node name="Train12" parent="." instance=ExtResource("1_2v2s7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.63478, 0, -12.9669)

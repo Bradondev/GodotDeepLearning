@@ -6,11 +6,14 @@
 [node name="Node" type="Node"]
 
 [node name="Base" parent="." instance=ExtResource("1_gtw1e")]
-position = Vector2(9, 4)
+position = Vector2(-192, -343)
 
 [node name="Sync" type="Node" parent="."]
 script = ExtResource("2_wlr1h")
-speed_up = 4.0
+speed_up = 6.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(400, 136)
 
 [node name="Base2" parent="." instance=ExtResource("1_gtw1e")]
-position = Vector2(10, 693)
+position = Vector2(-200, -8)

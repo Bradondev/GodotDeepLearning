@@ -1,10 +1,11 @@
 extends AIController2D
 
 
-var move =0
+var move =Vector2.ZERO
+var jump = false
 
-@export var cube : Area2D
-@onready var target = $"../../Area2D"
+@export var cube : Node2D
+@export var target : Area2D
 
 
 
@@ -21,12 +22,16 @@ func get_reward() -> float:
 func get_action_space() -> Dictionary:
 	return {
 		"move" : {
-			"size": 2,
+			"size": 1,
+			"action_type": "continuous"
+		},
+		"jump" : {
+			"size": 1,
 			"action_type": "continuous"
 		},
 	}
 
 func set_action(action) -> void:
-
-	move = action["move"][1]
+	jump =  action["jump"][0] > 0
+	move.x = action["move"][0]
 	print(move)
